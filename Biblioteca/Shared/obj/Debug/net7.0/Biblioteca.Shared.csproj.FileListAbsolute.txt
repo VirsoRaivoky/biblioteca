@@ -1,0 +1,12 @@
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\bin\Debug\net7.0\Biblioteca.Shared.deps.json
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\bin\Debug\net7.0\Biblioteca.Shared.dll
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\bin\Debug\net7.0\Biblioteca.Shared.pdb
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.csproj.AssemblyReference.cache
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.AssemblyInfoInputs.cache
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.AssemblyInfo.cs
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.dll
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\refint\Biblioteca.Shared.dll
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\Biblioteca.Shared.pdb
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\obj\Debug\net7.0\ref\Biblioteca.Shared.dll
