@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9wiZFyvhl190LmpAwAuG3XlNUa1fOODEa1SzLGGap7Q=",
+  "Hash": "6jA8QQeAyV5UN+yuXjD+YF3hWSRCDkHQev3Lz59uqGw=",
   "Source": "Biblioteca.Server",
   "BasePath": "_content/Biblioteca.Server",
   "Mode": "Default",
@@ -28,6 +28,74 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
+      "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\staticwebassets\\QuickGrid.razor.js",
+      "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
+      "RelativePath": "QuickGrid.razor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\staticwebassets\\QuickGrid.razor.js"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Biblioteca.Client.dll",
       "SourceId": "Biblioteca.Client",
@@ -264,7 +332,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -281,7 +349,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -298,7 +366,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Components.Forms.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.Forms.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.QuickGrid.dll",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.QuickGrid.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\0.1.0-alpha.22351.1\\lib\\net6.0\\Microsoft.AspNetCore.Components.QuickGrid.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
@@ -315,7 +400,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.Web.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
@@ -349,7 +434,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
@@ -539,6 +624,40 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.FileSystemGlobbing.dll"
     },
     {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.5\\lib\\net7.0\\Microsoft.Extensions.Localization.Abstractions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.extensions.localization\\7.0.5\\lib\\net7.0\\Microsoft.Extensions.Localization.dll"
+    },
+    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -587,7 +706,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Options.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\lib\\net7.0\\Microsoft.Extensions.Options.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
@@ -621,7 +740,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.jsinterop\\7.0.2\\lib\\net7.0\\Microsoft.JSInterop.dll"
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.jsinterop\\7.0.5\\lib\\net7.0\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
@@ -724,6 +843,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.2\\runtimes\\browser-wasm\\lib\\net7.0\\mscorlib.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.dll",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MudBlazor.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\.nuget\\packages\\mudblazor\\6.11.0\\lib\\net7.0\\MudBlazor.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\netstandard.dll",
@@ -3735,23 +3871,6 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.CoreLib.dll"
     },
     {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\1YKTeF0O.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
-    },
-    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\27PEOWgV.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -3954,23 +4073,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.Immutable.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\60onwnG2.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Options.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\6cun0UA6.gz",
@@ -4279,6 +4381,23 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll"
     },
     {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\bC7HD+UL.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MudBlazor.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.dll"
+    },
+    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\bDcEu0m0.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -4534,23 +4653,6 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.X509Certificates.dll"
     },
     {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\dvSporfJ.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
-    },
-    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\dXaivj08.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -4583,6 +4685,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XmlDocument.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\EH1UM6kR.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\eP+kQHjs.gz",
@@ -4634,6 +4753,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\EV2n2sFW.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\EV8HS+HX.gz",
@@ -4770,23 +4906,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.TypeExtensions.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\g4d4daIM.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\gc3qZrbQ.gz",
@@ -5010,23 +5129,6 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.wasm"
     },
     {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\hCS7zd4E.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
-    },
-    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\hDBSDIFa.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -5129,6 +5231,23 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebProxy.dll"
     },
     {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\I872CPGw.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
+    },
+    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\IdEhrkJr.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -5144,6 +5263,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Sockets.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\ikJCqPyB.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\iLANEsCZ.gz",
@@ -5265,23 +5401,6 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.dll"
     },
     {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\KgzW01Bo.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
-    },
-    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\KiWysk+t.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -5384,6 +5503,23 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Biblioteca.Shared.dll"
     },
     {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\LBGlfyt5.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
+    },
+    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\lMqA+Vu3.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -5450,6 +5586,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Process.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\LubiaW4i.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\M1aIYMa2.gz",
@@ -5894,6 +6047,23 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Primitives.dll"
     },
     {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\Q0Xy8TE2.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\q1QlN6p+.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -5909,6 +6079,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\Q9WIVFGG.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.QuickGrid.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.QuickGrid.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.QuickGrid.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\qpoowLtQ.gz",
@@ -6506,23 +6693,6 @@
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XPath.XDocument.dll"
     },
     {
-      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\VAv4KBcA.gz",
-      "SourceId": "Biblioteca.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
-    },
-    {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\vkzVnbwl.gz",
       "SourceId": "Biblioteca.Client",
       "SourceType": "Project",
@@ -6555,6 +6725,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Tasks.Extensions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\vq+nZlTU.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Options.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\VRQYVr+g.gz",
@@ -6640,6 +6827,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Biblioteca.Client.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\wIG+XvXE.gz",
+      "SourceId": "Biblioteca.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll"
     },
     {
       "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\obj\\Debug\\net7.0\\build-gz\\WJhJr+M4.gz",
@@ -7286,6 +7490,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manifest.json"
+    },
+    {
+      "Identity": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Server\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Biblioteca.Server.styles.css",
+      "SourceId": "Biblioteca.Server",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Server\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/Biblioteca.Server",
+      "RelativePath": "Biblioteca.Server.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Server\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Biblioteca.Server.styles.css"
     }
   ]
 }

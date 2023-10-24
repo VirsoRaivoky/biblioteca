@@ -1,34 +1,90 @@
 ﻿@page "/livros"
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
 <h3>Livros</h3>
 
+<div class="search">
+    <input type="text" @bind="filtroValor" placeholder="Digite o valor para filtrar" />
+    <select @bind="filtroSelecionado">
+        <option value="Titulo">Título</option>
+        <option value="Autor">Autor</option>
+        <option value="Genero">Gênero</option>
+        <option value="Ano">Ano</option>
+        <option value="ISBN">ISBN</option>
+    </select>
+    <button @onclick="FiltrarLivros">Filtrar</button>
+</div>
 
 
 
-
-
-@if (livros.Count <= 0 )
+@if (livrosFiltrados.Count <= 0 )
 {
     <span> Carregando Livros...</span>
 }
 else
 {
-    <ul>
-        @foreach (var livro in livros)
+    <div class="container">
+        @foreach (var livro in livrosFiltrados)
         {
-             <li>@livro.Title - @livro.Author - @livro.Year </li>
+            <div class="livroInfo">
+
+                <div class="image">
+                    <img src="/icon-192.png">
+                </div>
+
+                <div class="info">
+                <p><strong>Título:</strong> @livro.Title</p>
+                <p><strong>Autor:</strong> @livro.Author</p>
+                <p><strong>Gênero:</strong> @livro.Genre</p>
+                <p><strong>Ano:</strong> @livro.Year</p>
+                <p><strong>ISBN:</strong> @livro.ISBN</p>
+                </div>
+            </div>
+            <div class = "editButton">
+            <button @onclick="(() => EditLivro(livro.Id))" class="btn btn-primary createButton">Editar</button>
+            </div>
+            <hr/> 
         }
-    </ul>
-    
+    </div>  
 }
 
 @code {
     List<Livro> livros = new List<Livro>();
+    private List<Livro> livrosFiltrados = new List<Livro>();
+
+    private string filtroValor = "";
+    private string filtroSelecionado = "Titulo";
 
     protected override async Task OnInitializedAsync()
     {
         var result = await Http.GetFromJsonAsync<List<Livro>>("api/livro");
         if (result != null)
             livros = result;
+    }
+
+    private void FiltrarLivros()
+    {
+        livrosFiltrados = livros.Where(livro =>
+        {
+            // Use filtroSelecionado para determinar qual propriedade do livro usar para filtragem
+            switch (filtroSelecionado)
+            {
+                case "Titulo":
+                    return livro.Title.Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
+                case "Autor":
+                    return livro.Author.Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
+                case "Genero":
+                    return livro.Genre.Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
+                case "Ano":
+                    return livro.Year.ToString().Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
+                default:
+                    return false;
+            }
+        }).ToList();
+    }
+
+    void EditLivro(int id)
+    {
+        NavigationManager.NavigateTo($"/livro/{id}");
     }
 }

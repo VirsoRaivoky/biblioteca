@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Biblioteca.Shared;
+using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca.Server.Data
 {
@@ -6,7 +7,11 @@ namespace Biblioteca.Server.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) 
         {
-
+    
         }
+
+        public DbSet<Livro> Livros { get; set; }
+        public DbSet<Aluno> Alunos { get; set; }
+      
     }
 }

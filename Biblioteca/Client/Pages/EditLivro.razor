@@ -1,0 +1,96 @@
+﻿@page "/livro"
+@page "/livro/{id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+<h3>Editar informações</h3>
+
+@if (Id is null)
+{
+    <PageTitle> Adicionar um novo Livro</PageTitle>
+    <h3>Adicionar um novo livro</h3>
+}
+else
+{
+    <PageTitle> Editar Informações</PageTitle>
+    
+}
+
+<EditForm Model="livro" OnSubmit="HandleSubmit">
+    <div>
+        <label for="title"> Titulo</label>
+        <InputText id="title" @bind-Value="livro.Title" class="form-control"/> 
+    </div>
+    <div>
+        <label for="author"> Autor</label>
+        <InputText id="author" @bind-Value="livro.Author" class="form-control" />
+    </div>
+    <div>
+        <label for="publisher"> Editora</label>
+        <InputText id="publisher" @bind-Value="livro.Publisher" class="form-control" />
+    </div>
+    <div>
+        <label for="genre"> Genêro</label>
+        <InputText id="genre" @bind-Value="livro.Genre" class="form-control"/> 
+    </div>
+    <div>
+        <label for="year"> Ano de Lançamento</label>
+        <InputNumber id="year" @bind-Value="livro.Year" class="form-control" />
+    </div>
+    <div>
+        <label for="isbn"> ISBN</label>
+        <InputNumber id="isbn" @bind-Value="livro.ISBN" class="form-control" />
+    </div>
+    <div>
+        <label for="code"> Codígo</label>
+        <InputNumber id="code" @bind-Value="livro.Code" class="form-control" />
+    </div>
+    <div>
+        <label for="estoque"> Exemplares Disponiveis</label>
+        <InputNumber id="estoque" @bind-Value="livro.Estoque" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    @if(Id is not null)
+    {
+        <button type="button" class="btn btn-danger" @onclick="DeleteLivro"> Deletar Livro</button>
+    }
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    Livro livro = new Livro {};
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(Id is not null)
+        {
+            var result = await Http.GetFromJsonAsync<Livro>($"api/livro/{Id}");
+            if(result is not null)
+            {
+                livro = result;
+            }
+        }
+    }
+
+    async Task DeleteLivro()
+    {
+        await Http.DeleteAsync($"api/livro/{Id}");
+        NavigationManager.NavigateTo("/livros");
+    }
+
+    async Task HandleSubmit()
+    {
+        if(Id is null)
+        {
+            await Http.PostAsJsonAsync("api/livro", livro);
+
+        }
+        else
+        {
+            await Http.PutAsJsonAsync($"api/livro/{Id}", livro);
+        }
+        NavigationManager.NavigateTo("/livros");
+    }
+
+
+}

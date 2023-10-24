@@ -1,3 +1,37 @@
+/* /Pages/Livros.Razor.rz.scp.css */
+body[b-bwmuv9z61t] {
+}
+
+.createButton[b-bwmuv9z61t] {
+    justify-content: center;
+    display: flex;
+    margin: 10px 0px;
+}
+.editButton[b-bwmuv9z61t] {
+    justify-content: center;
+    display: flex;
+    margin: 10px 0px;
+}
+.livroInfo[b-bwmuv9z61t] {
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    border: black solid 2px;
+    width: 700px;
+    padding: 20px 0px;
+}
+.search[b-bwmuv9z61t] {
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    padding: 20px 0px;
+}
+.container[b-bwmuv9z61t] {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-fku4u4r6sm] {
     position: relative;
@@ -10,7 +44,7 @@ main[b-fku4u4r6sm] {
 }
 
 .top-row[b-fku4u4r6sm] {
-    background-color: lightblue;
+    background-color: whitesmoke;
     border-bottom: 1px solid #d6d5d5;
     justify-content: center;
     height: 3.5rem;

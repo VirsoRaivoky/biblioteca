@@ -1,0 +1,43 @@
+﻿@page "/alunos" 
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+<h3>Alunos</h3>
+
+<button @onclick="AddAluno" class="btn btn-primary">Adicionar Alunos</button>
+
+@if (alunos.Count <= 0)
+{
+    <span> Carregando Alunos...</span>
+}
+else
+{
+    <QuickGrid Items="alunos.AsQueryable()">
+        <PropertyColumn Property="a => a.Name" />
+        <PropertyColumn Property="a => a.Turma" />
+        <PropertyColumn Property="a => a.Serie" />
+        <TemplateColumn>
+            <button @onclick="(() => EditAluno(context.Id))" class="btn btn-primary">Editar</button>
+        </TemplateColumn>
+    </QuickGrid>
+}
+@code {
+    List<Aluno> alunos = new List<Aluno>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetFromJsonAsync<List<Aluno>>("api/aluno");
+        if (result != null)
+            alunos= result;
+    }
+
+
+    void AddAluno()
+    {
+        NavigationManager.NavigateTo("/aluno");
+    }
+
+    void EditAluno(int id)
+    {
+        NavigationManager.NavigateTo($"/aluno/{id}");
+    }
+}

@@ -1,0 +1,33 @@
+﻿body {
+}
+
+.createButton {
+    justify-content: center;
+    display: flex;
+    margin: 10px 0px;
+}
+.editButton {
+    justify-content: center;
+    display: flex;
+    margin: 10px 0px;
+}
+.livroInfo {
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    border: black solid 2px;
+    width: 700px;
+    padding: 20px 0px;
+}
+.search {
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    padding: 20px 0px;
+}
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   
+}

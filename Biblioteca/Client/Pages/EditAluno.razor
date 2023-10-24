@@ -1,0 +1,70 @@
+﻿@page "/aluno"
+@page "/aluno/{id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+<h3>Aluno</h3>
+
+@if (Id is null)
+{
+    <PageTitle> Adicionar um novo Alunoo</PageTitle>
+    <h3>Adicionar um novo Aluno</h3>
+}
+else
+{
+    <PageTitle> Editar Informações</PageTitle>
+}
+
+<EditForm Model="aluno" OnSubmit="HandleSubmit">
+    <div>
+        <label for="name"> Nome</label>
+        <InputText id="name" @bind-Value="aluno.Name" class="form-control" />
+    </div>
+    <div>
+        <label for="telefone"> Telefone</label>
+        <InputText id="telefone" @bind-Value="aluno.Telefone" class="form-control" />
+    </div>
+    <div>
+        <label for="email"> Email</label>
+        <InputText id="email" @bind-Value="aluno.Email" class="form-control" />
+    </div>
+    <div>
+        <label for="serie">Serie</label>
+        <InputText id="name" @bind-Value="aluno.Serie" class="form-control" />
+    </div>
+    <div>
+        <label for="turma"> Turma</label>
+        <InputText id="turma" @bind-Value="aluno.Turma" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+
+    @if (Id is not null)
+    {
+        <button type="button" class="btn btn-danger" @onclick="DeleteAluno"> Deletar Livro</button>
+    }
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    Aluno aluno = new Aluno{ };
+
+    async Task DeleteAluno()
+    {
+        await Http.DeleteAsync($"api/aluno/{Id}");
+        NavigationManager.NavigateTo("/alunos");
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id is null)
+        {
+            await Http.PostAsJsonAsync("api/aluno", aluno);
+
+        }
+        else
+        {
+            await Http.PutAsJsonAsync($"api/aluno/{Id}", aluno);
+        }
+        NavigationManager.NavigateTo("/alunos");
+    }
+}

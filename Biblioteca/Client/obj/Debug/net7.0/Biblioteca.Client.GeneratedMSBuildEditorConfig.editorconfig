@@ -20,20 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Alunos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1bm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/EditAluno.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFsdW5vLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/EditLivro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdExpdnJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Livros.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cm9zLnJhem9y
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Services.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Shared/SurveyPrompt.razor]
@@ -43,6 +47,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Livros.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-bwmuv9z61t
 
 [C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
