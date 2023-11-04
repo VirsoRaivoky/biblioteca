@@ -1,3 +1,60 @@
+/* /Pages/Alunos.razor.rz.scp.css */
+.searchdiv[b-zvih5wsztm] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 800px;
+    height: 150px;
+}
+.search[b-zvih5wsztm] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    gap: 10px;
+}
+
+.info[b-zvih5wsztm]
+{
+    margin-top: 40px;
+}
+.alunos[b-zvih5wsztm] {
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    height: 800px;
+}
+/* /Pages/EditAluno.razor.rz.scp.css */
+body[b-6mug7zpfsw] {
+}
+
+.editbuttons[b-6mug7zpfsw] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    gap: 5px;
+    margin-top: 15px;
+}
+/* /Pages/EditLivro.razor.rz.scp.css */
+body[b-c1kqvbu6bf] {
+}
+
+.editbuttons[b-c1kqvbu6bf] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    gap: 5px;
+    margin-top: 15px;
+}
+/* /Pages/LivroInfo.razor.rz.scp.css */
+.livroInfo[b-4v9cbarkxs] {
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    border-radius: 25px;
+    border-width: 5px;
+    width: 700px;
+    padding: 20px 0px;
+}
 /* /Pages/Livros.Razor.rz.scp.css */
 body[b-bwmuv9z61t] {
 }
@@ -12,25 +69,49 @@ body[b-bwmuv9z61t] {
     display: flex;
     margin: 10px 0px;
 }
+
 .livroInfo[b-bwmuv9z61t] {
     justify-content: center;
     display: flex;
     align-self: center;
-    border: black solid 2px;
+    border-radius: 5px;
+    border: 5px solid #ccddf7;
     width: 700px;
+    padding: 20px 0px;
+}
+
+.livroImage[b-bwmuv9z61t] {
+    position: relative;
+    left: -100px;
     padding: 20px 0px;
 }
 .search[b-bwmuv9z61t] {
     justify-content: center;
     display: flex;
-    align-self: center;
-    padding: 20px 0px;
+    margin: auto;
+    border-radius: 35px 30px;
+    width: 800px;
+    height: 150px;
+    border: 2px solid #6e7989;
+    margin-bottom: 50px;
+}
+
+.searchBar[b-bwmuv9z61t] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    gap: 10px;
 }
 .container[b-bwmuv9z61t] {
     justify-content: center;
     display: flex;
     flex-direction: column;
    
+}
+/* /Pages/Services.razor.rz.scp.css */
+.buttons[b-u2ehghr5rf] {
+    justify-content: center;
+    display: flex;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-fku4u4r6sm] {

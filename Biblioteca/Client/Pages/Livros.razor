@@ -1,59 +1,101 @@
 ﻿@page "/livros"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
-<h3>Livros</h3>
+<h2 class="display-2"> Lista de Livros</h2>
 
 <div class="search">
-    <input type="text" @bind="filtroValor" placeholder="Digite o valor para filtrar" />
-    <select @bind="filtroSelecionado">
-        <option value="Titulo">Título</option>
-        <option value="Autor">Autor</option>
-        <option value="Genero">Gênero</option>
-        <option value="Ano">Ano</option>
-        <option value="ISBN">ISBN</option>
-    </select>
-    <button @onclick="FiltrarLivros">Filtrar</button>
+    <div class="searchBar">
+        <input type="text" @bind="filtroValor" placeholder="Digite o valor para filtrar" />
+        <select @bind="filtroSelecionado">
+            <option value="Titulo">Título</option>
+            <option value="Autor">Autor</option>
+            <option value="Genero">Gênero</option>
+            <option value="Ano">Ano</option>
+            <option value="ISBN">ISBN</option>
+        </select>
+        <Button Color="ButtonColor.Primary" @onclick="FiltrarLivros">Filtrar</Button>
+    </div>
 </div>
-
-
-
-@if (livrosFiltrados.Count <= 0 )
+@if (livrosFiltrados.Count <= 0)
 {
     <span> Carregando Livros...</span>
 }
 else
 {
     <div class="container">
+
         @foreach (var livro in livrosFiltrados)
         {
+
             <div class="livroInfo">
 
-                <div class="image">
+                <div class="livroImage">
                     <img src="/icon-192.png">
                 </div>
 
                 <div class="info">
-                <p><strong>Título:</strong> @livro.Title</p>
-                <p><strong>Autor:</strong> @livro.Author</p>
-                <p><strong>Gênero:</strong> @livro.Genre</p>
-                <p><strong>Ano:</strong> @livro.Year</p>
-                <p><strong>ISBN:</strong> @livro.ISBN</p>
+                    <p><strong>Título:</strong> @livro.Title</p>
+                    <p><strong>Autor:</strong> @livro.Author</p>
+                    <p><strong>Gênero:</strong> @livro.Genre</p>
+                    <p><strong>Ano:</strong> @livro.Year</p>
+                    <p><strong>ISBN:</strong> @livro.ISBN</p>
                 </div>
             </div>
-            <div class = "editButton">
-            <button @onclick="(() => EditLivro(livro.Id))" class="btn btn-primary createButton">Editar</button>
+            <div class="editButton">
+                <Button Color="ButtonColor.Primary" @onclick="(() => OnShowModalClick(livro.Id))">Exibir Informações</Button>
+                <Button @onclick="(() => ReserveBook(livro.Id))" Color="ButtonColor.Success" Size="Size.Medium"> Realizar Reserva </Button>
             </div>
-            <hr/> 
+            <hr />
         }
-    </div>  
+    </div>
 }
+<Modal @ref="modal" Title="Informações do Livro">
+    <BodyTemplate>
+        @if (livroModal != null)
+        {
+
+            <p><strong>Título:</strong> @livroModal.Title</p>
+            <p><strong>Autor:</strong> @livroModal.Author</p>
+            <p><strong>Gênero:</strong> @livroModal.Genre</p>
+            <p><strong>Ano:</strong> @livroModal.Year</p>
+            <p><strong>Editora:</strong> @livroModal.Publisher</p>
+            <p><strong>ISBN:</strong> @livroModal.ISBN</p>
+            <p><strong>Código:</strong> @livroModal.Code</p>
+            <p><strong>Exemplares:</strong> @livroModal.Estoque</p>
+        }
+        else
+        {
+            <p> Livro não encontrado</p>
+        }
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Danger" @onclick="OnHideModalClick">Fechar</Button>
+        <Button Color="ButtonColor.Warning" @onclick="(() => EditLivro(livroModal.Id))">Editar Informações</Button>
+    </FooterTemplate>
+</Modal>
+
+
 
 @code {
     List<Livro> livros = new List<Livro>();
     private List<Livro> livrosFiltrados = new List<Livro>();
+    private Livro? livroModal;
 
     private string filtroValor = "";
     private string filtroSelecionado = "Titulo";
+
+    private Modal modal = default!;
+
+    private async Task OnShowModalClick(int id)
+    {
+        livroModal = livros.FirstOrDefault(l => l.Id == id);
+        await modal.ShowAsync();
+    }
+
+    private async Task OnHideModalClick()
+    {
+        await modal.HideAsync();
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -66,7 +108,6 @@ else
     {
         livrosFiltrados = livros.Where(livro =>
         {
-            // Use filtroSelecionado para determinar qual propriedade do livro usar para filtragem
             switch (filtroSelecionado)
             {
                 case "Titulo":
@@ -87,4 +128,11 @@ else
     {
         NavigationManager.NavigateTo($"/livro/{id}");
     }
+
+    void ReserveBook(int id)
+    {
+        NavigationManager.NavigateTo($"/reserva/{id}");
+    }
+
+
 }

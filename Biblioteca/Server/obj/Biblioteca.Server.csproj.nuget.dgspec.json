@@ -50,6 +50,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Blazor.Bootstrap": {
+              "target": "Package",
+              "version": "[1.10.3, )"
+            },
+            "Blazored.Typeahead": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Microsoft.AspNetCore.Components.QuickGrid": {
               "target": "Package",
               "version": "[0.1.0-alpha.22351.1, )"
@@ -63,9 +71,9 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
-            "MudBlazor": {
+            "bootstrap": {
               "target": "Package",
-              "version": "[6.11.0, )"
+              "version": "[5.3.2, )"
             }
           },
           "imports": [
@@ -148,6 +156,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Blazor.Bootstrap": {
+              "target": "Package",
+              "version": "[1.10.3, )"
+            },
+            "Blazored.Typeahead": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",
               "version": "[7.0.11, )"

@@ -1,0 +1,40 @@
+﻿@page "/livroInfo/{id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+<h3>Livro Info</h3>
+
+
+<div class="livroInfo">
+    <div class="info">
+       
+        <p><strong>Título:</strong> @livro.Title</p>
+        <p><strong>Autor:</strong> @livro.Author</p>
+        <p><strong>Gênero:</strong> @livro.Genre</p>
+        <p><strong>Ano:</strong> @livro.Year</p>
+        <p><strong>ISBN:</strong> @livro.ISBN</p>
+        <button @onclick="(() => EditLivro(livro.Id))" class="btn btn-primary createButton">Editar</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    Livro livro = new Livro { };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await Http.GetFromJsonAsync<Livro>($"api/livro/{Id}");
+            if (result is not null)
+            {
+                livro = result;
+            }
+        }
+    }
+
+    void EditLivro(int id)
+    {
+        NavigationManager.NavigateTo($"/livro/{id}");
+    }
+}

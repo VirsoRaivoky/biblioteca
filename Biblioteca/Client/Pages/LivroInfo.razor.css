@@ -1,0 +1,9 @@
+﻿.livroInfo {
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    border-radius: 25px;
+    border-width: 5px;
+    width: 700px;
+    padding: 20px 0px;
+}

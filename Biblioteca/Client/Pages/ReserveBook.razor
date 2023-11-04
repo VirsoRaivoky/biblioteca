@@ -1,0 +1,127 @@
+﻿@page "/reserva"
+@page "/reserva/{id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<Progress Class="mb-3">
+    <ProgressBar @ref="progressBar" Color="ProgressColor.Success"/>
+</Progress>
+
+@if (ps == PageStates.SELECTALUNO)
+{
+    <EditForm Model="reserva">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="aluno">Pesquisar Aluno:</label>
+            <input id="name" class="form-control" @bind="@searchTerm" @oninput="OnInput" autocomplete="off" />
+            <ul class="autocomplete-list">
+                @foreach (var aluno in filteredAlunos)
+                {
+                    <li @onclick="() => SelectAluno(aluno)">
+                        @aluno.Name - @aluno.Serie - @aluno.Turma -  <button @onclick="(() => SelectStudent(aluno))" class="btn btn-primary">Selecionar</button>
+                    </li>
+                }
+            </ul>
+        </div>
+    </EditForm>
+}
+
+else if (ps == PageStates.SELECTDATE)
+{
+    <EditForm Model="reserva" OnSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+
+        <div class="form-group">
+            <label for="data">Data e Hora da Reserva:</label>
+            <input id="data" class="form-control" @bind="reserva.DataReserva" type="datetime-local" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Save</button>
+    </EditForm>
+}
+
+<button @onclick="@Back" class="btn btn-primary">Voltar</button>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    ProgressBar progressBar;
+    private string searchTerm = "";
+    private int idAluno;
+    private DateTime dataSelecionada = DateTime.Now;
+    PageStates ps = PageStates.SELECTALUNO;
+
+    private enum PageStates
+    {
+        SELECTALUNO,
+        SELECTDATE
+    }
+
+    private List<Aluno> alunos = new List<Aluno>();
+    private List<Aluno> filteredAlunos = new List<Aluno>();
+    Livro livro = new Livro { };
+
+    Reserva reserva = new Reserva { };
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetFromJsonAsync<List<Aluno>>("api/aluno");
+        if (result != null)
+            alunos = result;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await Http.GetFromJsonAsync<Livro>($"api/livro/{Id}");
+            if (result is not null)
+            {
+                livro = result;
+                reserva.LivroId = livro.Id;
+            }
+        }
+    }
+
+    private void OnInput(ChangeEventArgs e)
+    {
+        searchTerm = e.Value?.ToString() ?? ""; // Garante que searchTerm não seja null
+        filteredAlunos = alunos
+            ?.Where(a => a != null && // Verifica se aluno não é null
+                         (a.Name?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                         (a.Serie?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                         (a.Turma?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false))
+            .ToList() ?? new List<Aluno>(); // Se alunos ou filteredAlunos forem null, inicializa com uma lista vazia
+    }
+
+    private void Back()
+    {
+        if (ps == PageStates.SELECTDATE)
+        {
+            progressBar.DecreaseWidth(50);
+            ps = PageStates.SELECTALUNO;
+        }
+    }
+
+    private void SelectAluno(Aluno aluno)
+    {
+        Console.WriteLine($"Aluno selecionado: {aluno.Name}, {aluno.Serie}, {aluno.Turma}");
+    }
+
+    private void SelectStudent(Aluno aluno)
+    {
+        idAluno = aluno.Id;
+        reserva.AlunoId = idAluno;
+        ps = PageStates.SELECTDATE;
+        progressBar.IncreaseWidth(50);
+    }
+
+
+    async Task HandleSubmit()
+    {
+        await Http.PostAsJsonAsync("api/reserva", reserva);
+        
+        NavigationManager.NavigateTo("/services");
+    }
+
+}

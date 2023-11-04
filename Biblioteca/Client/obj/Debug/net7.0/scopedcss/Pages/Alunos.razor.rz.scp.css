@@ -1,0 +1,24 @@
+.searchdiv[b-zvih5wsztm] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 800px;
+    height: 150px;
+}
+.search[b-zvih5wsztm] {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    gap: 10px;
+}
+
+.info[b-zvih5wsztm]
+{
+    margin-top: 40px;
+}
+.alunos[b-zvih5wsztm] {
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    height: 800px;
+}

@@ -12,13 +12,13 @@
 else
 {
     <PageTitle> Editar Informações</PageTitle>
-    
+
 }
 
 <EditForm Model="livro" OnSubmit="HandleSubmit">
     <div>
         <label for="title"> Titulo</label>
-        <InputText id="title" @bind-Value="livro.Title" class="form-control"/> 
+        <InputText id="title" @bind-Value="livro.Title" class="form-control" />
     </div>
     <div>
         <label for="author"> Autor</label>
@@ -29,8 +29,8 @@ else
         <InputText id="publisher" @bind-Value="livro.Publisher" class="form-control" />
     </div>
     <div>
-        <label for="genre"> Genêro</label>
-        <InputText id="genre" @bind-Value="livro.Genre" class="form-control"/> 
+        <label for="genre"> Gênero</label>
+        <InputText id="genre" @bind-Value="livro.Genre" class="form-control" />
     </div>
     <div>
         <label for="year"> Ano de Lançamento</label>
@@ -48,24 +48,28 @@ else
         <label for="estoque"> Exemplares Disponiveis</label>
         <InputNumber id="estoque" @bind-Value="livro.Estoque" class="form-control" />
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-    @if(Id is not null)
-    {
-        <button type="button" class="btn btn-danger" @onclick="DeleteLivro"> Deletar Livro</button>
-    }
+    <div class="bt">
+        <div class="editbuttons">
+            <button type="submit" class="btn btn-primary btn-lg">Save</button>
+            @if (Id is not null)
+            {
+                <button type="button" class="btn btn-danger btn-lg" @onclick="DeleteLivro"> Deletar Livro</button>
+            }
+        </div>
+    </div>
 </EditForm>
 
 @code {
     [Parameter]
     public int? Id { get; set; }
-    Livro livro = new Livro {};
+    Livro livro = new Livro { };
 
     protected override async Task OnParametersSetAsync()
     {
-        if(Id is not null)
+        if (Id is not null)
         {
             var result = await Http.GetFromJsonAsync<Livro>($"api/livro/{Id}");
-            if(result is not null)
+            if (result is not null)
             {
                 livro = result;
             }
@@ -80,7 +84,7 @@ else
 
     async Task HandleSubmit()
     {
-        if(Id is null)
+        if (Id is null)
         {
             await Http.PostAsJsonAsync("api/livro", livro);
 

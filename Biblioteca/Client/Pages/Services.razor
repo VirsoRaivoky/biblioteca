@@ -1,20 +1,32 @@
 ﻿@page "/services"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
-<h3>Services</h3>
+<h1 class="display-2"> Serviços</h1>
 
-<div class="createButton">
-    <button @onclick="AddLivro" class="btn btn-primary">Adicionar Livro</button>
+<Callout Type="CalloutType.Info"> 
+    Na página de Serviços, você pode realizar o cadastro de novos livros ou alunos no sistema, além de gerênciar reservas de livros
+</Callout>
+
+<div class="buttons">
+    <div class="createButton">
+        <button @onclick="AddLivro" class="btn btn-info btn-lg">
+            <Icon Name="IconName.JournalPlus"/> Adicionar Livro
+        </button>   
+            
+    </div>
+
+    <div class="createButton">
+        <button @onclick="AddAluno" class="btn btn-info btn-lg">
+            <Icon Name="IconName.PersonAdd" /> Adicionar Aluno
+        </button>
+    </div>
+
+    <div class="createButton">
+        <button @onclick="AddRent" class="btn btn-info btn-lg">
+            <Icon Name="IconName.Clipboard2Plus" /> Emprestimo de Livros
+        </button>
+    </div>
 </div>
-
-<div class="createButton">
-    <button @onclick="AddAluno" class="btn btn-primary">Adicionar Aluno</button>
-</div>
-
-<div class="createButton">
-    <button @onclick="AddLivro" class="btn btn-primary">Emprestimo de Livros</button>
-</div>
-
 
 @code {
 
@@ -30,6 +42,6 @@
 
     void AddRent()
     {
-        NavigationManager.NavigateTo("/emprestimo");
+        NavigationManager.NavigateTo("/reserva");
     }
 }

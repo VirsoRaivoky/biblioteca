@@ -274,7 +274,5 @@ C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\libman.json
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.QuickGrid.dll
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\BlazorBootstrap.dll
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Server\bin\Debug\net7.0\Blazored.Typeahead.dll

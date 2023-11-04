@@ -12,6 +12,7 @@ namespace Biblioteca.Server.Data
 
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Aluno> Alunos { get; set; }
+        public DbSet<Reserva> Reserva { get; set; }
       
     }
 }

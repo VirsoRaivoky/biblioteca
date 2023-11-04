@@ -2,51 +2,96 @@
 @page "/aluno/{id:int}"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
-<h3>Aluno</h3>
 
 @if (Id is null)
 {
     <PageTitle> Adicionar um novo Alunoo</PageTitle>
-    <h3>Adicionar um novo Aluno</h3>
+    <h1 class="display-2"> Registrar Aluno</h1>
+    <Callout Type="CalloutType.Info">
+        Campos marcados com <strong>*</strong> são obrigatórios.
+        Informações que forma deixadas em branco podem ser adicionados após o cadastro, vá para a página<strong>"Alunos"</strong>
+        e em seguida clique no botão de <strong>"Editar".</strong>
+
+    </Callout>
 }
 else
 {
     <PageTitle> Editar Informações</PageTitle>
+    <h1 class="display-2"> Editar Informações do Aluno</h1>
+    <Callout Type="CalloutType.Warning">
+        Utilize a página para alterar qualquer informação do aluno cadastrado. Caso deseje remover o aluno, certifique-se de que não
+        há nenhuma reserva em seu nome para não causar problemas no sistema.
+    </Callout>
+
 }
 
 <EditForm Model="aluno" OnSubmit="HandleSubmit">
     <div>
-        <label for="name"> Nome</label>
+        <label for="name"> Nome<strong>*</strong></label>
         <InputText id="name" @bind-Value="aluno.Name" class="form-control" />
     </div>
-    <div>
-        <label for="telefone"> Telefone</label>
-        <InputText id="telefone" @bind-Value="aluno.Telefone" class="form-control" />
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label for="telefone"> Telefone</label>
+            <InputText id="telefone" @bind-Value="aluno.Telefone" class="form-control" />
+        </div>
+        <div class="form-group col-md-5">
+            <label for="email"> Email</label>
+            <InputText id="email" @bind-Value="aluno.Email" class="form-control" />
+        </div>
     </div>
-    <div>
-        <label for="email"> Email</label>
-        <InputText id="email" @bind-Value="aluno.Email" class="form-control" />
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label for="serie">Serie<strong>*</strong></label>
+            <select @bind="aluno.Serie" class="form-control">
+                <option value=""> Selecione o ano</option>
+                <option value="6º Ano">6º Ano</option>
+                <option value="7º Ano">7º Ano</option>
+                <option value="8º Ano">8º Ano</option>
+                <option value="9º Ano">9º Ano</option>
+                <option value="1ª Série">1ª Série</option>
+                <option value="2ª Série">2ª Série</option>
+                <option value="3ª Série">3ª Série</option>
+            </select>
+        </div>
+        <div class="form-group col-md-5">
+            <label for="turma"> Turma<strong>*</strong></label>
+            <select @bind="aluno.Turma" class="form-control">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+        </div>
     </div>
-    <div>
-        <label for="serie">Serie</label>
-        <InputText id="name" @bind-Value="aluno.Serie" class="form-control" />
-    </div>
-    <div>
-        <label for="turma"> Turma</label>
-        <InputText id="turma" @bind-Value="aluno.Turma" class="form-control" />
-    </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <div class="bt">
+        <div class="editbuttons">
+            <button type="submit" class="btn btn-primary btn-lg">Save</button>
 
-    @if (Id is not null)
-    {
-        <button type="button" class="btn btn-danger" @onclick="DeleteAluno"> Deletar Livro</button>
-    }
+            @if (Id is not null)
+            {
+                <button type="button" class="btn btn-danger btn-lg" @onclick="DeleteAluno"> Deletar Livro</button>
+            }
+        </div>
+    </div>
 </EditForm>
 
 @code {
     [Parameter]
     public int? Id { get; set; }
-    Aluno aluno = new Aluno{ };
+    Aluno aluno = new Aluno { };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await Http.GetFromJsonAsync<Aluno>($"api/aluno/{Id}");
+            if (result is not null)
+            {
+                aluno = result;
+            }
+        }
+    }
 
     async Task DeleteAluno()
     {
