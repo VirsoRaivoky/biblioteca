@@ -54,10 +54,6 @@
               "target": "Package",
               "version": "[1.10.3, )"
             },
-            "Blazored.Typeahead": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            },
             "Microsoft.AspNetCore.Components.QuickGrid": {
               "target": "Package",
               "version": "[0.1.0-alpha.22351.1, )"
@@ -70,10 +66,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.2, )"
-            },
-            "bootstrap": {
-              "target": "Package",
-              "version": "[5.3.2, )"
             }
           },
           "imports": [

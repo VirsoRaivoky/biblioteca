@@ -3,31 +3,57 @@
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 
-<Progress Class="mb-3">
-    <ProgressBar @ref="progressBar" Color="ProgressColor.Success"/>
-</Progress>
+@if (ps == PageStates.SELECTALUNO)
+{
+    <h1 class="display-2"> Selecione o Aluno</h1>
+}
+else if (ps == PageStates.SELECTDATE)
+{
+    <h1 class="display-2"> Selecione a data da reserva.</h1>
+}
 
 @if (ps == PageStates.SELECTALUNO)
 {
-    <EditForm Model="reserva">
-        <DataAnnotationsValidator />
-        <div class="form-group">
-            <label for="aluno">Pesquisar Aluno:</label>
-            <input id="name" class="form-control" @bind="@searchTerm" @oninput="OnInput" autocomplete="off" />
-            <ul class="autocomplete-list">
-                @foreach (var aluno in filteredAlunos)
-                {
-                    <li @onclick="() => SelectAluno(aluno)">
-                        @aluno.Name - @aluno.Serie - @aluno.Turma -  <button @onclick="(() => SelectStudent(aluno))" class="btn btn-primary">Selecionar</button>
-                    </li>
-                }
-            </ul>
-        </div>
-    </EditForm>
+
+    <div class="alunoform">
+        <EditForm Model="reserva">
+            <DataAnnotationsValidator />
+            <div class="form-group">
+                <label for="aluno">Pesquisar Aluno:</label>
+                <input id="name" class="form-control" @bind="@searchTerm" @oninput="OnInput" autocomplete="off" />
+                <ul class="autocomplete-list">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Série</th>
+                                <th scope="col">Turma</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var aluno in filteredAlunos)
+                            {
+                                <tr>
+                                    <th scope="row">@aluno.Name</th>
+                                    <td>@aluno.Serie</td>
+                                    <td>@aluno.Turma</td>
+                                    <td><button @onclick="(() => SelectStudent(aluno))" class="btn btn-primary">Selecionar</button></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </ul>
+            </div>
+        </EditForm>
+    </div>
 }
 
 else if (ps == PageStates.SELECTDATE)
 {
+    <p> Aluno: @nomeAluno</p>
+    <p> Livro Selecionado: @livro.Title</p>
+
     <EditForm Model="reserva" OnSubmit="HandleSubmit">
         <DataAnnotationsValidator />
 
@@ -36,18 +62,24 @@ else if (ps == PageStates.SELECTDATE)
             <input id="data" class="form-control" @bind="reserva.DataReserva" type="datetime-local" />
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg">Save</button>
+        <div class="form-group">
+            <label for="description">Notas Adicionais: </label>
+            <input id="description" class="form-control" @bind="reserva.Description" rows="3" type="text" />
+        </div>
+        <div class="buttons">
+            <button type="submit" class="btn btn-success btn-lg">Confirmar</button>
+            <Button Color="ButtonColor.Primary" @onclick="@Back" Size="Size.Large">Voltar</Button>
+        </div>
     </EditForm>
 }
-
-<button @onclick="@Back" class="btn btn-primary">Voltar</button>
 
 @code {
     [Parameter]
     public int? Id { get; set; }
-    ProgressBar progressBar;
     private string searchTerm = "";
-    private int idAluno;
+
+    private string nomeAluno;
+
     private DateTime dataSelecionada = DateTime.Now;
     PageStates ps = PageStates.SELECTALUNO;
 
@@ -59,6 +91,7 @@ else if (ps == PageStates.SELECTDATE)
 
     private List<Aluno> alunos = new List<Aluno>();
     private List<Aluno> filteredAlunos = new List<Aluno>();
+
     Livro livro = new Livro { };
 
     Reserva reserva = new Reserva { };
@@ -78,7 +111,10 @@ else if (ps == PageStates.SELECTDATE)
             if (result is not null)
             {
                 livro = result;
-                reserva.LivroId = livro.Id;
+                reserva.Situacao = "EMPRESTADO";
+                reserva.LivroNome = livro.Title;
+                reserva.DataReserva = dataSelecionada;
+                reserva.IdLivro = livro.Code;
             }
         }
     }
@@ -98,29 +134,26 @@ else if (ps == PageStates.SELECTDATE)
     {
         if (ps == PageStates.SELECTDATE)
         {
-            progressBar.DecreaseWidth(50);
             ps = PageStates.SELECTALUNO;
         }
     }
 
-    private void SelectAluno(Aluno aluno)
-    {
-        Console.WriteLine($"Aluno selecionado: {aluno.Name}, {aluno.Serie}, {aluno.Turma}");
-    }
-
     private void SelectStudent(Aluno aluno)
     {
-        idAluno = aluno.Id;
-        reserva.AlunoId = idAluno;
+        var alunoTurma = $"{aluno.Serie} - {aluno.Turma}";
+
+        nomeAluno = aluno.Name;
+        reserva.AlunoNome = nomeAluno;
+        reserva.Turma = alunoTurma;
+
         ps = PageStates.SELECTDATE;
-        progressBar.IncreaseWidth(50);
     }
 
 
     async Task HandleSubmit()
     {
         await Http.PostAsJsonAsync("api/reserva", reserva);
-        
+
         NavigationManager.NavigateTo("/services");
     }
 

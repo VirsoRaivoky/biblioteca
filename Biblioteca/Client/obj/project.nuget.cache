@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WuooJNczq0rW4z50IGpq/oS4Bfr3gDF5epk1nDjn1thMnCMBOTfE5lvqeUsjwB9XvPEsReKrxRhoO7fOphSnZQ==",
+  "dgSpecHash": "uBfMXH5t7+TgMNt115OPZ4O+p5u+1wqi1cC6imnQSUVIVlrcSgM0doEgj1ydiqMII+RsCuuwyf3k5qQJGxLNcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Wilso\\Documents\\Projetos\\WebApi\\Biblioteca\\Biblioteca\\Client\\Biblioteca.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wilso\\.nuget\\packages\\blazor.bootstrap\\1.10.3\\blazor.bootstrap.1.10.3.nupkg.sha512",
-    "C:\\Users\\Wilso\\.nuget\\packages\\blazored.typeahead\\4.7.0\\blazored.typeahead.4.7.0.nupkg.sha512",
-    "C:\\Users\\Wilso\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.2\\microsoft.aspnetcore.authorization.7.0.2.nupkg.sha512",
     "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.2\\microsoft.aspnetcore.components.7.0.2.nupkg.sha512",
     "C:\\Users\\Wilso\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.2\\microsoft.aspnetcore.components.analyzers.7.0.2.nupkg.sha512",

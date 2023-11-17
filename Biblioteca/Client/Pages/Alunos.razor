@@ -1,11 +1,8 @@
 ﻿@page "/alunos"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
-<h1 class="display-2"> Lista de Alunos</h1>
 
-<Preload>
-
-</Preload>
+<h2 class="display-2"> Lista de Alunos</h2>
 
 <div class="info">
     <Alert Color="AlertColor.Primary">
@@ -17,6 +14,12 @@
     </Alert>
 </div>
 
+<div class="createButton">
+    <button @onclick="AddAluno" class="btn btn-primary btn-lg">
+        <Icon Name="IconName.PersonAdd" /> Adicionar Aluno
+    </button>
+</div>
+
 <div class="alunos">
     <div class="alunoDados">
         <Grid @ref="grid"
@@ -24,10 +27,13 @@
               Class="table table-hover table-bordered table-striped"
               DataProvider="AlunosDataProvider"
               AllowFiltering="true"
-              Responsive="true"
               AllowPaging="true"
               AllowSorting="true"
               PageSize="5"
+              PageSizeSelectorItems="@(new int[] { 5,10,20 })"
+              PaginationItemsTextFormat="{0} - {1} itens de {2}"
+              ItemsPerPageText="Itens por página"
+              Responsive="true"
               FiltersRowCssClass="bg-primary text-white bg-opacity-25 border-bottom-0"
               HeaderRowCssClass="bg-primary text-white border-bottom-0">
 
@@ -41,39 +47,39 @@
                 @context.Turma
             </GridColumn>
             <GridColumn TItem="Aluno" HeaderText="Ações" Filterable=false>
-                <Button Color="ButtonColor.Primary" @onclick="() => EditAluno(context.Id)"> <Icon Name="IconName.Pen"></Icon> Editar</Button>
+                <Button Color="ButtonColor.Primary" TooltipTitle="Ver Mais" @onclick="() => EditAluno(context.Id)"> <Icon Name="IconName.InfoCircle"></Icon></Button>
             </GridColumn>
         </Grid>
     </div>
 </div>
 
 @code {
-    private BlazorBootstrap.Grid<Aluno> grid = default!;
-    private IEnumerable<Aluno> alunos = default!;
+    private BlazorBootstrap.Grid<Aluno>? grid;
 
-    [Inject] protected PreloadService preloadService { get; set; }
+    private IEnumerable<Aluno>? alunos;
 
     private async Task<GridDataProviderResult<Aluno>> AlunosDataProvider(GridDataProviderRequest<Aluno> request)
     {
-        try
+        if (alunos is null)
         {
-            preloadService.Show();
-            if (alunos is null)
-            {
-                var result = await Http.GetFromJsonAsync<List<Aluno>>("api/aluno");
-                if (result != null)
-                    alunos = result;
-            }
+            var result = await Http.GetFromJsonAsync<List<Aluno>>("api/aluno");
+            if (result != null)
+                alunos = result;
         }
-        catch
-        {
 
-        }
-        finally
+        if (alunos != null)
         {
-            preloadService.Hide();
+            return await Task.FromResult(request.ApplyTo(alunos));
         }
-        return await Task.FromResult(request.ApplyTo(alunos));
+        else
+        {
+            return await Task.FromResult(new GridDataProviderResult<Aluno>());
+        }
+    }
+
+     void AddAluno()
+    {
+        NavigationManager.NavigateTo("/aluno");
     }
 
     void EditAluno(int id)

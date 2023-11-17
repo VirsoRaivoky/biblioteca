@@ -2,55 +2,71 @@
 @page "/livro/{id:int}"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
-<h3>Editar informações</h3>
 
 @if (Id is null)
 {
-    <PageTitle> Adicionar um novo Livro</PageTitle>
-    <h3>Adicionar um novo livro</h3>
+    <PageTitle> Adicionar um novo livro</PageTitle>
+    <h1 class="display-2"> Registrar Livro</h1>
+    <Callout Type="CalloutType.Info">
+        Campos marcados com <strong>*</strong> são obrigatórios.
+        Informações que forma deixadas em branco podem ser adicionados após o cadastro, vá para a página<strong>"Livros"</strong>
+        e em seguida clique no botão de <strong>"Editar".</strong>
+    </Callout>
 }
 else
 {
     <PageTitle> Editar Informações</PageTitle>
+    <h1 class="display-2"> Editar Informações do Livro</h1>
+    <Callout Type="CalloutType.Warning">
+        Utilize a página para alterar qualquer informação do livro cadastrado. Caso deseje remover o livro, certifique-se de que não
+        há nenhuma reserva em seu nome para não causar problemas no sistema.
+    </Callout>
 
 }
 
 <EditForm Model="livro" OnSubmit="HandleSubmit">
     <div>
         <label for="title"> Titulo</label>
-        <InputText id="title" @bind-Value="livro.Title" class="form-control" />
+        <InputText id="title" @bind-Value="livro.Title" class="form-control" autocomplete="off" />
     </div>
     <div>
         <label for="author"> Autor</label>
-        <InputText id="author" @bind-Value="livro.Author" class="form-control" />
+        <InputText id="author" @bind-Value="livro.Author" class="form-control" autocomplete="off" />
     </div>
-    <div>
-        <label for="publisher"> Editora</label>
-        <InputText id="publisher" @bind-Value="livro.Publisher" class="form-control" />
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label for="publisher"> Editora</label>
+            <InputText id="publisher" @bind-Value="livro.Publisher" class="form-control" autocomplete="off" />
+        </div>
+        <div class="form-group col-md-5">
+            <label for="genre"> Gênero</label>
+            <InputText id="genre" @bind-Value="livro.Genre" class="form-control" autocomplete="off" />
+        </div>
     </div>
-    <div>
-        <label for="genre"> Gênero</label>
-        <InputText id="genre" @bind-Value="livro.Genre" class="form-control" />
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label for="year"> Ano de Lançamento</label>
+            <InputNumber id="year" @bind-Value="livro.Year" class="form-control" autocomplete="off" />
+        </div>
+        <div class="form-group col-md-5">
+            <label for="isbn"> ISBN</label>
+            <InputNumber id="isbn" @bind-Value="livro.ISBN" class="form-control" autocomplete="off" />
+        </div>
     </div>
-    <div>
-        <label for="year"> Ano de Lançamento</label>
-        <InputNumber id="year" @bind-Value="livro.Year" class="form-control" />
-    </div>
-    <div>
-        <label for="isbn"> ISBN</label>
-        <InputNumber id="isbn" @bind-Value="livro.ISBN" class="form-control" />
-    </div>
-    <div>
-        <label for="code"> Codígo</label>
-        <InputNumber id="code" @bind-Value="livro.Code" class="form-control" />
-    </div>
-    <div>
-        <label for="estoque"> Exemplares Disponiveis</label>
-        <InputNumber id="estoque" @bind-Value="livro.Estoque" class="form-control" />
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label for="code"> Codígo</label>
+            <InputNumber id="code" @bind-Value="livro.Code" class="form-control" autocomplete="off" />
+        </div>
+
+        <div class="form-group col-md-5">
+            <label for="estoque"> Exemplares Disponiveis</label>
+            <InputNumber id="estoque" @bind-Value="livro.Estoque" class="form-control" autocomplete="off" />
+        </div>
     </div>
     <div class="bt">
         <div class="editbuttons">
-            <button type="submit" class="btn btn-primary btn-lg">Save</button>
+            <button type="submit" class="btn btn-primary btn-lg">Confirmar</button>
             @if (Id is not null)
             {
                 <button type="button" class="btn btn-danger btn-lg" @onclick="DeleteLivro"> Deletar Livro</button>

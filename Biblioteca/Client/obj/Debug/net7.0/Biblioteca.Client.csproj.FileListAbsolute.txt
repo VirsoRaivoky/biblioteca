@@ -831,18 +831,10 @@ C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.QuickGrid.dll
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\Q9WIVFGG.gz
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\scopedcss\Pages\Livros.Razor.rz.scp.css
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\L3+uyi5h.gz
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\vkzVnbwl.gz
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\WgLAhr3l.gz
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\UKsmuG7n.gz
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\scopedcss\Pages\LivroInfo.razor.rz.scp.css
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\scopedcss\Pages\Alunos.razor.rz.scp.css
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\net7.0\libman.json
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\scopedcss\Pages\Services.razor.rz.scp.css
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Typeahead.dll
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Typeahead.dll.gz
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\net7.0\Blazored.Typeahead.dll
-C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\hBOyvark.gz
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\hCS7zd4E.gz
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\KgzW01Bo.gz
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\1YKTeF0O.gz
@@ -856,3 +848,7 @@ C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\bin\Debug\
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\xAHoeXFK.gz
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\scopedcss\Pages\EditAluno.razor.rz.scp.css
 C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\scopedcss\Pages\EditLivro.razor.rz.scp.css
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\L3+uyi5h.gz
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\vkzVnbwl.gz
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\WgLAhr3l.gz
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\obj\Debug\net7.0\build-gz\UKsmuG7n.gz

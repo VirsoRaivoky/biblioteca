@@ -1,54 +1,63 @@
 ﻿@page "/livros"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
+
 <h2 class="display-2"> Lista de Livros</h2>
 
-<div class="search">
-    <div class="searchBar">
-        <input type="text" @bind="filtroValor" placeholder="Digite o valor para filtrar" />
-        <select @bind="filtroSelecionado">
-            <option value="Titulo">Título</option>
-            <option value="Autor">Autor</option>
-            <option value="Genero">Gênero</option>
-            <option value="Ano">Ano</option>
-            <option value="ISBN">ISBN</option>
-        </select>
-        <Button Color="ButtonColor.Primary" @onclick="FiltrarLivros">Filtrar</Button>
+<div class="info">
+    <Alert Color="AlertColor.Primary">
+        <h4 class="alert-heading"><Icon Name="IconName.InfoCircleFill" class="me-2"> </Icon> Sobre a página</h4>
+        <p>
+            A página contém informações sobre os Livros registrados no sistema, você pode ver informações adicionais
+            clicando no <strong>nome do livro.</strong> Caso seja preciso alterar alguma informação, clique no botão <strong> "Editar" </strong>
+        </p>
+    </Alert>
+</div>
+
+<div class="createButton">
+    <button @onclick="AddLivro" class="btn btn-primary btn-lg">
+        <Icon Name="IconName.JournalPlus" /> Adicionar Livro
+    </button>
+
+</div>
+
+<div class="livros">
+    <div class="livrosDados">
+        <Grid @ref="grid"
+              TItem="Livro"
+              Class="table table-hover table-bordered table-striped"
+              DataProvider="LivrosDataProvider"
+              AllowFiltering="true"
+              AllowPaging="true"
+              AllowSorting="true"
+              PageSize="10" 
+              PageSizeSelectorItems="@(new int[] { 5,10,20 })"
+              PaginationItemsTextFormat="{0} - {1} itens de {2}"
+              ItemsPerPageText="Itens por página"
+              Responsive="true"
+              FiltersRowCssClass="bg-success text-white bg-opacity-25 border-bottom-0"
+              HeaderRowCssClass="bg-success text-white border-bottom-0">
+
+            <GridColumn TItem="Livro" HeaderText="Titulo" SortKeySelector="@(item => item.Title)" PropertyName="Title" IsDefaultSortColumn="true" Sortable=true>
+                @context.Title.ToUpper()
+            </GridColumn>
+            <GridColumn TItem="Livro" HeaderText="Autor" PropertyName="Author">
+                @context.Author
+            </GridColumn>
+            <GridColumn TItem="Livro" HeaderText="Gênero" SortKeySelector="@(item => item.Genre)" PropertyName="Genre" Sortable=true>
+                @context.Genre.ToUpper()
+            </GridColumn>
+            <GridColumn TItem="Livro" HeaderText="Editora" PropertyName="Publisher">
+                @context.Publisher
+            </GridColumn>
+            <GridColumn TItem="Livro" HeaderText="Ações" Filterable=false>
+                <Button Color="ButtonColor.Success" TooltipTitle="Ver Mais" TooltipColor="TooltipColor.Info" @onclick="() => OnShowModalClick(context.Id)"> <Icon Name="IconName.InfoCircle"></Icon></Button>
+                <Button Color="ButtonColor.Success" TooltipTitle="Realizar Reserva" TooltipColor="TooltipColor.Success" @onclick="(() => ReserveBook(context.Id))"><Icon Name="IconName.Journal"></Icon></Button>
+            </GridColumn>
+        </Grid>
     </div>
 </div>
-@if (livrosFiltrados.Count <= 0)
-{
-    <span> Carregando Livros...</span>
-}
-else
-{
-    <div class="container">
 
-        @foreach (var livro in livrosFiltrados)
-        {
-
-            <div class="livroInfo">
-
-                <div class="livroImage">
-                    <img src="/icon-192.png">
-                </div>
-
-                <div class="info">
-                    <p><strong>Título:</strong> @livro.Title</p>
-                    <p><strong>Autor:</strong> @livro.Author</p>
-                    <p><strong>Gênero:</strong> @livro.Genre</p>
-                    <p><strong>Ano:</strong> @livro.Year</p>
-                    <p><strong>ISBN:</strong> @livro.ISBN</p>
-                </div>
-            </div>
-            <div class="editButton">
-                <Button Color="ButtonColor.Primary" @onclick="(() => OnShowModalClick(livro.Id))">Exibir Informações</Button>
-                <Button @onclick="(() => ReserveBook(livro.Id))" Color="ButtonColor.Success" Size="Size.Medium"> Realizar Reserva </Button>
-            </div>
-            <hr />
-        }
-    </div>
-}
 <Modal @ref="modal" Title="Informações do Livro">
     <BodyTemplate>
         @if (livroModal != null)
@@ -75,16 +84,37 @@ else
 </Modal>
 
 
-
 @code {
-    List<Livro> livros = new List<Livro>();
-    private List<Livro> livrosFiltrados = new List<Livro>();
-    private Livro? livroModal;
-
-    private string filtroValor = "";
-    private string filtroSelecionado = "Titulo";
+    private BlazorBootstrap.Grid<Livro>? grid = new BlazorBootstrap.Grid<Livro>();
 
     private Modal modal = default!;
+
+    [Inject] ModalService modalService { get; set; } = default!;
+
+    private IEnumerable<Livro>? livros;
+    private Livro? livroModal;
+
+    private async Task<GridDataProviderResult<Livro>> LivrosDataProvider(GridDataProviderRequest<Livro> request)
+    {
+
+        if (livros is null)
+        {
+            var result = await Http.GetFromJsonAsync<List<Livro>>("api/livro");
+            if (result != null)
+                livros = result;
+        }
+
+        if (livros != null)
+        {
+            return await Task.FromResult(request.ApplyTo(livros));
+        }
+        else
+        {
+            return await Task.FromResult(new GridDataProviderResult<Livro>());
+        }
+
+
+    }
 
     private async Task OnShowModalClick(int id)
     {
@@ -97,31 +127,9 @@ else
         await modal.HideAsync();
     }
 
-    protected override async Task OnInitializedAsync()
+    void AddLivro()
     {
-        var result = await Http.GetFromJsonAsync<List<Livro>>("api/livro");
-        if (result != null)
-            livros = result;
-    }
-
-    private void FiltrarLivros()
-    {
-        livrosFiltrados = livros.Where(livro =>
-        {
-            switch (filtroSelecionado)
-            {
-                case "Titulo":
-                    return livro.Title.Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
-                case "Autor":
-                    return livro.Author.Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
-                case "Genero":
-                    return livro.Genre.Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
-                case "Ano":
-                    return livro.Year.ToString().Contains(filtroValor, StringComparison.OrdinalIgnoreCase);
-                default:
-                    return false;
-            }
-        }).ToList();
+        NavigationManager.NavigateTo("/livro");
     }
 
     void EditLivro(int id)

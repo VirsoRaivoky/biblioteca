@@ -2,9 +2,8 @@
 }
 
 .createButton {
-    justify-content: center;
-    display: flex;
-    margin: 10px 0px;
+
+   margin-bottom: 10px;
 }
 .editButton {
     justify-content: center;
@@ -37,6 +36,7 @@
     border: 2px solid #6e7989;
     margin-bottom: 50px;
 }
+
 
 .searchBar {
     justify-content: center;

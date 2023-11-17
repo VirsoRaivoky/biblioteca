@@ -1,0 +1,3 @@
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\bin\Debug\net7.0\publish\Biblioteca.Shared.dll
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\bin\Debug\net7.0\publish\Biblioteca.Shared.deps.json
+C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Shared\bin\Debug\net7.0\publish\Biblioteca.Shared.pdb

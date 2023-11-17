@@ -1,0 +1,106 @@
+﻿@page "/reservas"
+@inject HttpClient Http
+
+<h2 class="display-2"> Reservas </h2>
+
+<div class="info">
+    <Alert Color="AlertColor.Primary">
+        <h4 class="alert-heading"><Icon Name="IconName.InfoCircleFill" class="me-2"> </Icon> Sobre a página</h4>
+        <p>
+            A página contém informações sobre as reservas de livros feitas no sistema
+        </p>
+    </Alert>
+</div>
+
+<div class="reservas">
+    <div class="reservaDados">
+        <Grid @ref="grid"
+              TItem="Reserva"
+              Class="table table-hover table-bordered table-striped"
+              DataProvider="ReservasDataProvider"
+              AllowFiltering="true"
+              AllowPaging="true"
+              AllowSorting="true"
+              PageSize="5"
+              PageSizeSelectorItems="@(new int[] { 5,10,20 })"
+              PaginationItemsTextFormat="{0} - {1} itens de {2}"
+              ItemsPerPageText="Itens por página"
+              Responsive="true"
+              FiltersRowCssClass="bg-secondary text-white bg-opacity-25 border-bottom-0"
+              HeaderRowCssClass="bg-secondary text-white border-bottom-0">
+
+            <GridColumn TItem="Reserva" HeaderText="Data" SortKeySelector="@(item => item.DataReserva)" PropertyName="DataReserva" IsDefaultSortColumn="true" Sortable=true>
+                @context.DataReserva
+            </GridColumn>
+            <GridColumn TItem="Reserva" HeaderText="Serie" PropertyName="Serie">
+                @context.LivroNome
+            </GridColumn>
+            <GridColumn TItem="Reserva" HeaderText="Aluno" SortKeySelector="@(item => item.AlunoNome)" PropertyName="AlunoNome" Sortable=true>
+                @context.AlunoNome
+            </GridColumn>
+            <GridColumn TItem="Reserva" HeaderText="Turma" PropertyName="Turma">
+                @context.Turma
+            </GridColumn>
+            <GridColumn TItem="Reserva" HeaderText="Situação" PropertyName="Situacao">
+                @context.Situacao
+            </GridColumn>
+            <GridColumn TItem="Reserva" HeaderText="Ações" Filterable=false>
+                <Button Color="ButtonColor.Secondary" TooltipTitle="Ver Mais" TooltipColor="TooltipColor.Info" @onclick="() => OnShowModalClick(context.Id)"> <Icon Name="IconName.InfoCircle"></Icon></Button>
+            </GridColumn>
+        </Grid>
+    </div>
+</div>
+
+<Modal @ref="modal" Title="Informações do Livro">
+    <BodyTemplate>
+        @if (reservaModal != null)
+        {
+
+            <p><strong>Aluno:</strong> @reservaModal.AlunoNome</p>
+            <p><strong>Livro:</strong> @reservaModal.LivroNome</p>
+            <p><strong>Notas:</strong> @reservaModal.Description</p>
+        }
+    </BodyTemplate>
+</Modal>
+@code {
+    private BlazorBootstrap.Grid<Reserva>? grid;
+    private Modal modal = default!;
+
+    private Reserva? reservaModal;
+    private IEnumerable<Reserva>? reservas;
+
+    private async Task<GridDataProviderResult<Reserva>> ReservasDataProvider(GridDataProviderRequest<Reserva> request)
+    {
+        if (reservas is null)
+        {
+            var result = await Http.GetFromJsonAsync<List<Reserva>>("api/reserva");
+            if (result != null)
+                reservas = result;
+        }
+
+        if (reservas != null)
+        {
+            return await Task.FromResult(request.ApplyTo(reservas));
+        }
+        else
+        {
+            return await Task.FromResult(new GridDataProviderResult<Reserva>());
+        }
+    }
+
+    private async Task OnShowModalClick(int id)
+    {
+        reservaModal = reservas.FirstOrDefault(r => r.Id == id);
+        await modal.ShowAsync();
+    }
+
+    private async Task OnHideModalClick()
+    {
+        await modal.HideAsync();
+    }
+
+    private async Task ChangeStatus(int id)
+    {
+        
+    }
+}

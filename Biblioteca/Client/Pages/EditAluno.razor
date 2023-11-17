@@ -5,13 +5,12 @@
 
 @if (Id is null)
 {
-    <PageTitle> Adicionar um novo Alunoo</PageTitle>
+    <PageTitle> Adicionar um novo Aluno</PageTitle>
     <h1 class="display-2"> Registrar Aluno</h1>
     <Callout Type="CalloutType.Info">
         Campos marcados com <strong>*</strong> são obrigatórios.
         Informações que forma deixadas em branco podem ser adicionados após o cadastro, vá para a página<strong>"Alunos"</strong>
         e em seguida clique no botão de <strong>"Editar".</strong>
-
     </Callout>
 }
 else
@@ -28,16 +27,16 @@ else
 <EditForm Model="aluno" OnSubmit="HandleSubmit">
     <div>
         <label for="name"> Nome<strong>*</strong></label>
-        <InputText id="name" @bind-Value="aluno.Name" class="form-control" />
+        <InputText id="name" @bind-Value="aluno.Name" class="form-control" autocomplete="off" />
     </div>
     <div class="row">
         <div class="form-group col-md-5">
             <label for="telefone"> Telefone</label>
-            <InputText id="telefone" @bind-Value="aluno.Telefone" class="form-control" />
+            <InputText id="telefone" @bind-Value="aluno.Telefone" class="form-control" autocomplete="off" />
         </div>
         <div class="form-group col-md-5">
             <label for="email"> Email</label>
-            <InputText id="email" @bind-Value="aluno.Email" class="form-control" />
+            <InputText id="email" @bind-Value="aluno.Email" class="form-control" autocomplete="off" />
         </div>
     </div>
     <div class="row">
@@ -57,6 +56,7 @@ else
         <div class="form-group col-md-5">
             <label for="turma"> Turma<strong>*</strong></label>
             <select @bind="aluno.Turma" class="form-control">
+                <option value="">Selecione a Turma </option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -66,7 +66,7 @@ else
     </div>
     <div class="bt">
         <div class="editbuttons">
-            <button type="submit" class="btn btn-primary btn-lg">Save</button>
+            <button type="submit" class="btn btn-primary btn-lg">Confirmar</button>
 
             @if (Id is not null)
             {

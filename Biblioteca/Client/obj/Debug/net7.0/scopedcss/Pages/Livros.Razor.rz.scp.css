@@ -2,9 +2,8 @@ body[b-bwmuv9z61t] {
 }
 
 .createButton[b-bwmuv9z61t] {
-    justify-content: center;
-    display: flex;
-    margin: 10px 0px;
+
+   margin-bottom: 10px;
 }
 .editButton[b-bwmuv9z61t] {
     justify-content: center;
@@ -37,6 +36,7 @@ body[b-bwmuv9z61t] {
     border: 2px solid #6e7989;
     margin-bottom: 50px;
 }
+
 
 .searchBar[b-bwmuv9z61t] {
     justify-content: center;

@@ -18,12 +18,12 @@
 
 .info[b-zvih5wsztm]
 {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .alunos[b-zvih5wsztm] {
     justify-content: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
     height: 800px;
 }
 /* /Pages/EditAluno.razor.rz.scp.css */
@@ -63,9 +63,8 @@ body[b-bwmuv9z61t] {
 }
 
 .createButton[b-bwmuv9z61t] {
-    justify-content: center;
-    display: flex;
-    margin: 10px 0px;
+
+   margin-bottom: 10px;
 }
 .editButton[b-bwmuv9z61t] {
     justify-content: center;
@@ -98,6 +97,7 @@ body[b-bwmuv9z61t] {
     border: 2px solid #6e7989;
     margin-bottom: 50px;
 }
+
 
 .searchBar[b-bwmuv9z61t] {
     justify-content: center;

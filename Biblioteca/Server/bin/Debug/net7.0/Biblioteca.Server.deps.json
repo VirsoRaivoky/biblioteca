@@ -10,8 +10,6 @@
         "dependencies": {
           "Biblioteca.Client": "1.0.0",
           "Biblioteca.Shared": "1.0.0",
-          "Blazor.Bootstrap": "1.10.3",
-          "Blazored.Typeahead": "4.7.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "7.0.11",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.Design": "7.0.11",
@@ -68,19 +66,6 @@
           }
         }
       },
-      "Blazored.Typeahead/4.7.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "7.0.2",
-          "Microsoft.AspNetCore.Components.Web": "7.0.2"
-        },
-        "runtime": {
-          "lib/net6.0/Blazored.Typeahead.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "bootstrap/5.3.2": {},
       "Humanizer/2.14.1": {
         "dependencies": {
           "Humanizer.Core.af": "2.14.1",
@@ -2689,10 +2674,8 @@
         "dependencies": {
           "Biblioteca.Shared": "1.0.0",
           "Blazor.Bootstrap": "1.10.3",
-          "Blazored.Typeahead": "4.7.0",
           "Microsoft.AspNetCore.Components.QuickGrid": "0.1.0-alpha.22351.1",
-          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.2",
-          "bootstrap": "5.3.2"
+          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.2"
         },
         "runtime": {
           "Biblioteca.Client.dll": {}
@@ -2731,20 +2714,6 @@
       "sha512": "sha512-b+yNtXNE6KEY/eJ4cPQyA9+AgvzQHxEmj3t6c4XRKgSFqlr+YvbKLSnZeRNyRaULBN5bPV4GYWhe+tAy3O6yZA==",
       "path": "blazor.bootstrap/1.10.3",
       "hashPath": "blazor.bootstrap.1.10.3.nupkg.sha512"
-    },
-    "Blazored.Typeahead/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-fTN4Bt9rwEE/d33FXFd+h/DBjVtsFJLRf9B8mu0zJWMWG5Mk2tU2il3aK0+laUxNgBNBgEL0jW/831I+oapd6A==",
-      "path": "blazored.typeahead/4.7.0",
-      "hashPath": "blazored.typeahead.4.7.0.nupkg.sha512"
-    },
-    "bootstrap/5.3.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-m0/GEaLwE35B8P1xScFhwAsQi5o6kWPzOVPdGkoFwv+5YjmbgXFPQai71N5APwRCU52ZO4vHYWJ5DYSqKKgivw==",
-      "path": "bootstrap/5.3.2",
-      "hashPath": "bootstrap.5.3.2.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",

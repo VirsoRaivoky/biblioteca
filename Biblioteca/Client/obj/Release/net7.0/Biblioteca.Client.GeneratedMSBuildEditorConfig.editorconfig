@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Biblioteca.Client
+build_property.RootNamespace = Biblioteca.Client
+build_property.ProjectDir = C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Wilso\Documents\Projetos\WebApi\Biblioteca\Biblioteca\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/ReserveBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2ZUJvb2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Alunos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1bm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-zvih5wsztm
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/EditAluno.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFsdW5vLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-6mug7zpfsw
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/EditLivro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdExpdnJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-c1kqvbu6bf
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/LivroInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cm9JbmZvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-4v9cbarkxs
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Livros.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2cm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-bwmuv9z61t
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Pages/Services.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-u2ehghr5rf
+
+[C:/Users/Wilso/Documents/Projetos/WebApi/Biblioteca/Biblioteca/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-fku4u4r6sm

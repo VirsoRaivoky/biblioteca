@@ -43,5 +43,21 @@ namespace Biblioteca.Server.Controllers
 
             return await GetAllReservas();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<List<Reserva>>> DeleteReserva(int id)
+        {
+            var dbReserva = await _context.Reserva.FindAsync(id);
+
+            if (dbReserva == null)
+            {
+                return NotFound("Essa Reserva não existe!");
+            }
+
+            _context.Reserva.Remove(dbReserva);
+            await _context.SaveChangesAsync();
+
+            return await GetAllReservas();
+        }
     }
 }

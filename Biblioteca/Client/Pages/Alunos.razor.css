@@ -14,11 +14,11 @@
 
 .info
 {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .alunos {
     justify-content: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
     height: 800px;
 }
